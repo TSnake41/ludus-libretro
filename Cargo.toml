@@ -1,0 +1,17 @@
+[package]
+name = "ludus-libretro"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libretro-rs = { git = "https://github.com/TSnake41/libretro-rs.git", branch = "0.1" }
+ludus = { git = "https://github.com/TSnake41/ludus.git" }
+anyhow = "1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+lto = true
